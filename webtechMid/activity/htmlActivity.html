@@ -1,0 +1,175 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="../style/css.css" type="text/css">
+  <title>WebTech</title>
+
+</head>
+
+<body class="body" id="midtermProject">
+  <div id="header">
+ <span id="WSAT">Web Systems and Technology 2019</span>
+ 
+  </div>
+  
+
+
+
+  <div class="mainCont">
+
+    <header class="headers" id="mheader">Midterm Course Topics</header>
+    
+ 
+
+
+
+<h1 class = "center">HTML Survey Quiz </h1>
+<body>
+<script>
+var answers = ["A","B","C","C","D","A","A","D","D","C"], 
+    tot = answers.length;
+function getValue( radioName ){
+    var radios = document.getElementsByName( radioName ); 
+    for(var y=0; y<radios.length; y++)
+      if(radios[y].checked) return radios[y].value; 
+}
+//getting score
+function getScore(){
+  var score = 0;
+  for (var i=0; i<tot; i++)
+    if(getValue("question"+i)===answers[i]) score += 1;
+  return score;
+}
+function returnScore(){
+  alert("Your score is "+ getScore() +"/"+ tot);
+}
+</script>
+
+
+<ul>
+  <li>
+    <h3>tag that have start and end tag between the tags content</h3>
+    <input type="radio" name="question0" value="A"> Html Elements<br>
+    <input type="radio" name="question0" value="B">Selector<br>
+    <input type="radio" name="question0" value="C">CSS Elements<br>
+    <input type="radio" name="question0" value="D">Hyperlinks<br>
+  </li>
+  
+  <li>
+    <h3>The man who is responsible of the HTTP proposal.</h3>
+    <input type="radio" name="question1" value="A">Lim Berners-Tee<br>
+    <input type="radio" name="question1" value="B">Tim Berners-Lee<br>
+    <input type="radio" name="question1" value="C">Jim Terners-Bee<br>
+    <input type="radio" name="question1" value="D">All of the above<br>
+  </li>
+  
+  <li>
+    <h3>Tag to support javascript </h3>
+    <input type="radio" name="question2" value="A">Table Contents<br>
+    <input type="radio" name="question2" value="B">Forms<br>
+    <input type="radio" name="question2" value="C">Scripting<br>
+    <input type="radio" name="question2" value="D">Demanding edits<br>
+  </li>
+
+  <li>
+    <h3>What is the starting tag of main root?</h3>
+    <input type="radio" name="question3" value="A">&lt;head&gt;<br>
+    <input type="radio" name="question3" value="B">&lt;link&gt;<br>
+    <input type="radio" name="question3" value="C">&lt;html&gt;<br>
+    <input type="radio" name="question3" value="D">get<br>
+  </li>
+
+  <li>
+    <h3>it allows you to organize or design the content by section</h3>
+    <input type="radio" name="question4" value="A">Document<br>
+    <input type="radio" name="question4" value="B">metadata<br>
+    <input type="radio" name="question4" value="C">sectioning root<br>
+    <input type="radio" name="question4" value="D"> content sectioning<br>
+  </li>
+
+  <li>
+    <h3>its a tag that used to design and organize the content inside the body tag</h3>
+    <input type="radio" name="question5" value="A">Text Content<br>
+    <input type="radio" name="question5" value="B">Main Root<br>
+    <input type="radio" name="question5" value="C">Document Metadata<br>
+    <input type="radio" name="question5" value="D">all of the above<br>
+  </li>
+
+  <li>
+    <h3>what is the tag of sectioning root to be use?</h3>
+    <input type="radio" name="question6" value="A">&lt;body&gt;<br>
+    <input type="radio" name="question6" value="B">&lt;title&gt;<br>
+    <input type="radio" name="question6" value="C">&lt;address&gt;<br>
+    <input type="radio" name="question6" value="D">&lt;footer&gt;<br>
+  </li>
+
+  <li>
+    <h3>what is the tag element to be use in Text Content?</h3>
+    <input type="radio" name="question7" value="A">&lt;figcaption&gt;<br>
+    <input type="radio" name="question7" value="B">&lt;figure&gt;<br>
+    <input type="radio" name="question7" value="C">&lt;blockquote&gt;<br>
+    <input type="radio" name="question7" value="D">all of the above<br>
+  </li>
+
+  <li>
+    <h3>HTML</h3>
+    <input type="radio" name="question8" value="A">Uniform Resource Locator<br>
+    <input type="radio" name="question8" value="B">World Area Information Server<br>
+    <input type="radio" name="question8" value="C">Extensible Markup Language<br>
+    <input type="radio" name="question8" value="D">hypertextmarkup language<br>
+  </li>
+
+  <li>
+    <h3>tag elements use to inline, style, structure, hyperlink, line text image file in the same page.</h3>
+    <input type="radio" name="question9" value="A">Main Root<br>
+    <input type="radio" name="question9" value="B">Text Content<br>
+    <input type="radio" name="question9" value="C">Inline Text Semantics<br>
+    <input type="radio" name="question9" value="D">None of the above<br>
+  </li>
+ 
+
+<button onclick="returnScore()">View Results</button>
+
+
+    
+
+  </div>
+ 
+  <span id="sidebar">
+        <div id="navigation">
+          <div>
+              <ul>
+                  <li class= "options">
+                      <a class="current" href="../index.html">Home</a>
+                  </li>
+                  <li>
+                     <a href="../html/htmltop.html">HTML Lesson</a>
+                  </li>
+                  <li>
+                      <a href="../css/cssTop.html">CSS Lesson</a>
+                  </li>
+                  <li>
+                      <a href="../javascript/javascriptTop.html">JAVASCRIPT Lesson</a>
+                  </li>
+                  <li>
+                      <a href="../activity/activity.html">Activities</a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+        
+        </span>
+  
+  
+</body>
+
+
+
+
+
+
+</body>
+</html>
