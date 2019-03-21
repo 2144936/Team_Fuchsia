@@ -61,6 +61,41 @@
 					JavaScript has a built in function to convert a string, written in JSON format, into native JavaScript objects:<br/>
 					<h5>JSON.parse()</h5><br/>
 					So, if you receive data from a server, in JSON format, you can use it like any other JavaScript object.<br/>
+					
+					<h1>Valid Data Types</h1>
+					In JSON, values must be one of the following data types:<br/>
+					<br/>
+					<h3>String</h3>
+					String in JSON must be written in double quotes.<br/>
+					<h5>{ "name":"John" }</h5><br/>
+					<h3>Number</h3>
+					Numbers in JSON must be an integer or a floating point.<br/>
+					<h5>{ "age":30 }</h5><br/>
+					<h3>Objects (JSON Objects)</h3>
+					Values in JSON can be objects.<br/>
+					<h5>{
+						"employee":{ "name":"John", "age":30, "city":"New York" }
+						}</h5>
+					Objects as values in JSON must follow the same rules as JSON objects.<br/>
+					<br/>
+					<h3>Array</h3>
+					Values in JSON can be arrays.<br/>
+					<h5>{
+						"employees":[ "John", "Anna", "Peter" ]
+						}</h5><br/>
+					<h3>Booleans</h3>
+					Values in JSON can be true/false.<br/>
+					<h5>{ "sale":true }</h5><br/>
+					<h3>JSON Null</h3>
+					Values in JSON can be null.<br/>
+					<h5>{ "middlename":null }</h5><br/>
+					<br/>
+					JSON values cannot be one of the following data types:<br/>
+					<br/>
+					Function<br/>
+					Date<br/>
+					Undefined<br/>
+					<br/>
 					<br/>
 					<br/>
 
