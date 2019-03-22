@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+<title>WebTech</title>
+
+</head>
+
+<body class = "body" id="midtermProject">
+  <div id = "header">
+    <span id = "WSAT"> Web Systems and Technology 2019</span>
+  </div>
+
+  <span id = "bard">
+    <div id="nav">
+      <div>
+        <ul>
+          <li class= "options">
+            <a class="current" href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="html/htmlLesson.html">HTML Lesson</a>
+          </li>
+          <li>
+            <a href="css/cssLesson.html">CSS Lesson</a>
+          </li>
+          <li>
+            <a href="javascript/javascriptLesson.html">JAVASCRIPT Lesson</a>
+          </li>
+          <li>
+            <a href="activity/activity.html">Activities</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </span>
+  <div class="mainCont">
+
+    <header class="headers" id="mheader">Midterm Course Topics</header>
+    
+        <div class="dropdown" >
+       <button onclick="myFunction()" class="dropbtn">HTML Survey Quiz</button>
+  <div id="myDropdown" class="dropdown-content">
+          <p>Test your knowledge</p><p><a href = htmlActivity.html>Take Quiz</a></p>
+        </div>
+                </div>
+
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+        <br>
+        <br>
+
+                <div class="dropdown" id="JavaScript">
+                <button  onclick="myFunction1()" class="dropbtn">CSS Survey Quiz </button>
+                 <div id="myDropdown1" class="dropdown-content">
+  <p class="1"> Goodluck !</p>
+</p><p><a href = cssActivity.html>Take quiz</a></p>
+
+
+                </div>
+                </div>
+        <br>
+        <br>
+
+        <script>
+
+function myFunction1() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+ <div class="dropdown" id="JavaScript">
+                <button onclick="myFunction2()" class="dropbtn">JavaScript Quiz</button>
+                 <div id="myDropdown2" class="dropdown-content">
+   <p>This is the final Quiz. </p><p><a href = jsActivity.html>Your final Quiz to pass</a></p>
+                </div>
+                </div>
+        <br>
+        <br>
+
+        <script>
+
+function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>    
+</div>
+</body>
+</html>
