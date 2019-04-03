@@ -1,4 +1,23 @@
-#code {
-    background-color: black;    /* Light gray */
-  }
+code {
+    display: table;
+    background-color: f5f5ff;
+    border-color : 7f7fbf;
+    border-style : dashed;
+    border-width : 1px;
+    font-family  : courier new;
+    margin-left  : 128px;
+    padding      : 14px;
+    white-space  : pre;
+}
+
+p#jsonFormat{
+	background-color: #e6e6e6;
+	color: red;
+	display: inline;
+}
+
+p#warning{
+	color: red;
+	display: inline;
+}
   

@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Javascript | JSON</title>
-		<!--<link rel="stylesheet" type="text/css" href="../css/style2.css">-->
+		<link rel="stylesheet" type="text/css" href="../css/style2.css">
 	</head>
 	<body>
 		<div class="body">
@@ -26,80 +26,88 @@
 					<h1>Sending Data</h1>
 					If you have data stored in a JavaScript object, you can convert the object into JSON, and send it to a server:<br/>
 					<h3>Example</h3>
-					<h5 id="code">	
-						var myObj = {name: "John", age: 31, city: "New York"};<br/>
-						var myJSON = JSON.stringify(myObj);<br/>
-						window.location = "demo_json.php?x=" + myJSON;<br/>
-						<br/>
-					</h5>
+					<code>
+						<p>var myObj = {name: "John", age: 31, city: "New York"};
+						<p>var myJSON = JSON.stringify(myObj);
+						<p>window.location = "demo_json.php?x=" + myJSON;</p>
+					</code>
 					<h1>Receiving Data</h1>
 					If you receive data in JSON format, you can convert it into a JavaScript object:<br/>
-					<h3>Example</h3>
-					<h5 id="code">	
-							var myJSON = '{"name":"John", "age":31, "city":"New York"}';<br/>
-							var myObj = JSON.parse(myJSON);<br/>
-							document.getElementById("demo").innerHTML = myObj.name;<br/>
-							<br/>
-					</h5>
+					<h3>Example</h3>	
+					<code>
+						<p>var myJSON = '{"name":"John", "age":31, "city":"New York"}';
+						<p>var myObj = JSON.parse(myJSON);
+						<p>document.getElementById("demo").innerHTML = myObj.name;</p>
+					</code>
 					<h1>Storing Data</h1>
 					When storing data, the data has to be a certain format, and regardless of where you choose to store it, <br/>
 					text is always one of the legal formats. JSON makes it possible to store JavaScript objects as text.<br/>
 					<h3>Example</h3>
-					<h5 id="code">	
-							// Storing data:<br/>
-							myObj = {name: "John", age: 31, city: "New York"};<br/>
-							myJSON = JSON.stringify(myObj);<br/>
-							localStorage.setItem("testJSON", myJSON);<br/>
+					<code>	
+						<p>// Storing data:
+						<p>myObj = {name: "John", age: 31, city: "New York"};
+						<p>myJSON = JSON.stringify(myObj);
+						<p>localStorage.setItem("testJSON", myJSON);
 
-							// Retrieving data:<br/>
-							text = localStorage.getItem("testJSON");<br/>
-							obj = JSON.parse(text);<br/>
-							document.getElementById("demo").innerHTML = obj.name;<br/>
-					</h5>
+						<p>// Retrieving data:
+						<p>text = localStorage.getItem("testJSON");
+						<p>obj = JSON.parse(text);
+						<p>document.getElementById("demo").innerHTML = obj.name;</p>
+					</code>
 					<h1>Exchanging Data</h1>
 					Since the JSON format is text only, it can easily be sent to and from a server, and used as a data format by any programming language.<br/>
-					JavaScript has a built in function to convert a string, written in JSON format, into native JavaScript objects:<br/>
-					<h5>JSON.parse()</h5><br/>
-					So, if you receive data from a server, in JSON format, you can use it like any other JavaScript object.<br/>
-					
+					JavaScript has a built in function to convert a string, written in JSON format, into native JavaScript objects:
+					<p id='jsonFormat'>
+						JSON.parse()
+					</p>
+					<p>So, if you receive data from a server, in JSON format, you can use it like any other JavaScript object.<br/>
 					<h1>Valid Data Types</h1>
 					In JSON, values must be one of the following data types:<br/>
 					<br/>
 					<h3>String</h3>
 					String in JSON must be written in double quotes.<br/>
-					<h5>{ "name":"John" }</h5><br/>
+					<code>
+						<p>{ "name":"John" }</p>
+					</code>
 					<h3>Number</h3>
 					Numbers in JSON must be an integer or a floating point.<br/>
-					<h5>{ "age":30 }</h5><br/>
+					<code>
+						<p>{ "age":30 }</p>
+					</code>
 					<h3>Objects (JSON Objects)</h3>
-					Values in JSON can be objects.<br/>
-					<h5>{
-						"employee":{ "name":"John", "age":30, "city":"New York" }
-						}</h5>
+					Values in JSON can be objects.<br/>	
+					<code>
+						<p>"employee":{ "name":"John", "age":30, "city":"New York" }</p>
+					</code>
 					Objects as values in JSON must follow the same rules as JSON objects.<br/>
 					<br/>
 					<h3>Array</h3>
 					Values in JSON can be arrays.<br/>
-					<h5>{
-						"employees":[ "John", "Anna", "Peter" ]
-						}</h5><br/>
+					<code>
+						<p>{"employees":[ "John", "Anna", "Peter" ]}</p>
+					</code>
 					<h3>Booleans</h3>
 					Values in JSON can be true/false.<br/>
-					<h5>{ "sale":true }</h5><br/>
+					<code>
+						<p>{ "sale":true }</p>
+					</code>
 					<h3>JSON Null</h3>
 					Values in JSON can be null.<br/>
-					<h5>{ "middlename":null }</h5><br/>
+					<code>
+						<p>{ "middlename":null }</p>
+					</code>
 					<br/>
 					JSON values cannot be one of the following data types:<br/>
 					<br/>
-					Function<br/>
-					Date<br/>
-					Undefined<br/>
+					<code>
+						<p>Function
+						<br/>Date
+						<br/>Undefined</p>
+					</code>
 					<br/>
 					<br/>
 					<br/>
-
-					<a type="button" href="#">Next Lesson</a>
+					<a type="button" href="js2.html">Next Lesson</a>
 				</div>
 			</div>
 		</div>
