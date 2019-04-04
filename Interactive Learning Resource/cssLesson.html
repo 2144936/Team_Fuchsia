@@ -28,7 +28,53 @@
         </nav>
     </header>
     <main id="index">
-	
+	<hr>
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>CSS Selector</h2>
+               <p> Selector Syntax - chain of one or more sequences of simple selectors separated by combinators.
+               <p>Examples:   :: after (example of pseudo element)
+			   <p>+  , > - combinator</p>
+
+
+			   <p>Selector Group - comma  - separated list of selectors representing the union of all elements. It is selected by each of the selectors in the list.</p>
+			   <p>Examples: h1, h2, h3, :link, :visited, ul,  p</p>
+<hr>
+
+<h2>Categories of Simple Selectors</h2>
+<ol type='a'>
+	<li>Descendant Combinator - combines two selectors such that elements matched by the second selector are selected if they have an ancestor element matching the first selector.</li>
+	Examples:  white space, ie, space, tab, linefeed
+
+	<li> Child Combinator (>) - placed between two CSS selectors. It matches only those elements matched by the second selector that are the children of elements matched by the first.</li>
+	 Syntax: selector1 > selector2 
+
+	 <li>Sibling Combinator (~) - separates two selectors and matches the second element only if it follows the first element (though not necessarily immediately), and both are children of the same parent element.</li>
+	 Syntax: former_element ~ target_element { style properties }
+	 
+	 <h2>CSS Simple Selectors</h2>
+<ol type ='a'>
+	<li>Universal Selector (*) - it matches elements of any type. Each set of tags represents an element on the page.</li>
+	 Syntax: * 
+	 <li>Type Selector - must match one or more HTML elements of the same name. Thus, a selector of nav would match all HTML nav elements, and a selector of ul would match all HTML unordered lists, or ul elements.</li>
+	 Syntax: element 
+	 <li>ID Selectors - is declared using a hash, or pound symbol (#) preceding a string of characters. The string of characters is defined by the developer. This selector matches any HTML element that has an ID attribute with the same value as that of the selector, but minus the hash symbol.</li>
+	 Syntax: #id_value 
+	 <li>Class Selectors -  is the most useful of all CSS selectors. It is declared with a dot preceding a string of one or more characters</li>
+	 Syntax: .class_name 
+	 <li>Attribute Selectors - targets elements based on the presence and/or value of HTML
+	 attributes, and is declared using square brackets:</li>
+	<ul>
+		<li>[attr] - represents an element with an attribute name of attr.</li>
+		<li>[attr=value] - represents an element with an attribute name of attr whose value is exactly value.</li>
+		<li>[attr~=value] - represents an element with an attribute name of attr whose value is a whitespace-separated list of words, one which is exactly value.</li>
+		<li>[attr^=value] - represents an element with an attribute name of attr whose value is prefixed preceded by value.</li>
+	</ul>
+<li>Pseudo - Classes - uses a colon character to identify a pseudo-state that an element might be in.</li>
+Example: the state of being hovered, or the state of being activated
+</ol>
+<hr>
 	
 
     </main>
