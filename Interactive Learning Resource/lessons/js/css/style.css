@@ -1,3 +1,4 @@
+
 input#lessonVersion{
 	visibility:hidden;
 }
@@ -6,7 +7,96 @@ div>img{
 	width:139px;
 	height:40px;
 }
-
+	
 input#restartBtn{
 	visibility:hidden;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+  background-image: url(../images/bears.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 540px 480px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+h2 {
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+input#startBtn{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 64px 98px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+}
+
+input#nextBtn{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 64px 98px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+}
+
+input#restartBtn{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 64px 98px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+}
+
+div#answer {
+   font-family: Impact, Charcoal, sans-serif;
+   font-size: 70px;
+}
+
+div#tries {
+   font-family: Impact, Charcoal, sans-serif;
+   font-size: 70px;
+}
+
+div#guesses {
+   font-family: Impact, Charcoal, sans-serif;
+   font-size: 70px;
+}
+div#finResult {
+   font-family: Impact, Charcoal, sans-serif;
+   font-size: 50px;
+}
+
+.container { 
+  height: 200px;
+  position: relative;
+  border: 3px solid green; 
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+img#picture {
+  width: 650px;
+  height: 200px;
 }
