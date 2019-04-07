@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FUCHSIA Interactive Learning</title>
+<link rel="stylesheet" href="../style/style.css"/>
+
+
+</head>
+<body>
+<div class="container">
+    <header>
+			<div id="banner">
+        	<img src="../images/logo.jpg" alt=""/>
+        
+        	<h1>
+				<a href="index.html"><span class="highlight">Web Tek</span></a>
+			</h1>
+        	<p id="sub">Interactive Learning Resource 2019</p>
+							</div>
+        <nav>
+            <a class="current" href="../index.html">About</a>
+            <a href="../html/htmlLesson.html">Html Lesson</a>
+         	<a href="../css/cssLesson.html">Css Lesson</a>
+            <a href="../js/jsLesson.html">JavaScript Lesson</a>
+			<a href="../interactive/activity.html">Activity</a>
+        </nav>
+    </header>
+    <main id="jsLesson">
+    	<!-- insert here -->
+    <div class="body">
+        <div class="content">
+                <div id="intro">
+                    <br><h1>Parse</h1>
+                    <p id="par">A common use of JSON is to exchange data to/from a web server.<br>
+                    When receiving data from a web server, the data is always a string.<br>
+                    Parse the data with <p id="jsonFormat">JSON.parse()</p><br>
+                <p id="par">and the data becomes a JavaScript object.</p><br>
+                    <br/>
+                    <h3>Example</h3>
+                    Imagine we received this text from a web server:
+                    <code>
+                        <p>'{ "name":"John", "age":30, "city":"New York"}'</p>
+                    </code>
+                    Use the JavaScript function <p id="jsonFormat">JSON.parse()</p> to convert text into a JavaScript object:
+                    <code>
+                        <p>var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');</p>
+                    </code>
+                    <p id="warning">Make sure the text is written in JSON format, or else you will get a syntax error.</p>
+                    <br>
+                    Use the JavaScript object in your page:
+                    <h3>Example</h3>
+                    <code>
+                        <p>&lt;p id="demo">&lt;/p></p>
+                        <p>&lt;script></p>
+                        <p>document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;</p>
+                        <p>&lt;/script></p>
+                    </code>
+                    <br>
+                    <h1>JSON From the Server</h1><br>
+                    <p id="par">You can request JSON from the server by using an AJAX request<br>
+                    As long as the response from the server is written in JSON format, you can parse the string into a JavaScript object.</p><br>
+                    <h3>Example</h3>
+                    Use the XMLHttpRequest to get data from the server:
+                    <code>
+                        <p>var xmlhttp = new XMLHttpRequest();</p>
+                        <p>xmlhttp.onreadystatechange = function() {</p>
+                        <p>  if (this.readyState == 4 && this.status == 200) {</p>
+                        <p> var myObj = JSON.parse(this.responseText);</p>
+                        <p> document.getElementById("demo").innerHTML = myObj.name;</p>
+                        <p>  }</p>
+                        <p>};</p>
+                        <p>xmlhttp.open("GET", "json_demo.txt", true);</p>
+                        <p>xmlhttp.send();</p>
+                    </code><br>
+                    <h1>Array as JSON</h1><br>
+                    When using the <p id="warning">JSON.parse()</p> on a JSON derived from an array, the method will return a JavaScript array, instead of a JavaScript object.
+                    <h3>Example</h3>
+                    The JSON returned from the server is an array:
+                    <code>
+                        <p>var xmlhttp = new XMLHttpRequest();</p>
+                        <p>xmlhttp.onreadystatechange = function() {</p>
+                        <p>  if (this.readyState == 4 && this.status == 200) {</p>
+                        <p> var myArr = JSON.parse(this.responseText);</p>
+                        <p> document.getElementById("demo").innerHTML = myArr[0];</p>
+                        <p>  }</p>
+                        <p>};</p>
+                        <p>xmlhttp.open("GET", "json_demo_array.txt", true);</p>
+                        <p>xmlhttp.send();</p>
+                    </code>
+                    <br>
+                    <h1>Exceptions</h1><br>
+                    <h2>Parsing Dates</h1>
+                    <p id="par">Date objects are not allowed in JSON.<br>
+                    If you need to include a date, write it as a string.<br>
+                    You can convert it back into a date object later:</p><br>
+                    <h3>Example</h3>
+                    Convert a string into a date:
+                    <code>
+                        <p>var text = '{ "name":"John", "birth":"1986-12-14", "city":"New York"}';</p>
+                        <p>var obj = JSON.parse(text);</p>
+                        <p>obj.birth = new Date(obj.birth);</p>
+
+                        <p>document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;</p>
+                    </code>
+                    Or, you can use the second parameter, of the <p id="warning">JSON.parse()</p> function, called reviver.<br>
+                    The reviver parameter is a function that checks each property, before returning the value.
+                    <h3>Example</h3>
+                    Convert a string into a date, using the reviver function:
+                    <code>
+                        <p>var text = '{ "name":"John", "birth":"1986-12-14", "city":"New York"}';</p>
+                        <p>var obj = JSON.parse(text, function (key, value) {</p>
+                        <p>  if (key == "birth") {</p>
+                        <p> return new Date(value);</p>
+                        <p>  } else {</p>
+                        <p> return value;</p>
+                        <p>  }</p>
+                        <p>});</p>
+
+                        <p>document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;</p>
+                    </code>
+                    <h2>Parsing Functions</h2>
+                    <p id="par">Functions are not allowed in JSON.<br>
+                    If you need to include a function, write it as a string.<br>
+                    You can convert it back into a function later:</p><br>
+                    <h3>Example</h3>
+                   <p id="par"> Convert a string into a function:</p>
+                    <code>
+                        <p>var text = '{ "name":"John", "age":"function () {return 30;}", "city":"New York"}';</p>
+                        <p>var obj = JSON.parse(text);</p>
+                        <p>obj.age = eval("(" + obj.age + ")");</p>
+
+                        <p>document.getElementById("demo").innerHTML = obj.name + ", " + obj.age();</p>
+                    </code>
+                    
+                    <br/>
+                    <br/>
+                    <br/>
+                    <a type="button" href="js3.html">Go back</a>
+                    <a type="button" href="js5.html">Next Lesson</a>
+                
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+		 <footer>
+        <small>&copy; 2019 WebTek - FUCHSIA Group</small>
+    </footer>
+	</div>
+</body>
+</html>

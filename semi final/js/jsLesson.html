@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FUCHSIA Interactive Learning</title>
+<link rel="stylesheet" href="../style/style.css"/>
+
+
+</head>
+<body>
+<div class="container">
+    <header>
+			<div id="banner">
+        	<img src="../images/logo.jpg" alt=""/>
+        
+        	<h1>
+				<a href="index.html"><span class="highlight">Web Tek</span></a>
+			</h1>
+        	<p id="sub">Interactive Learning Resource 2019</p>
+							</div>
+        <nav>
+            <a class="current" href="../index.html">About</a>
+            <a href="../html/htmlLesson.html">Html Lesson</a>
+         	<a href="../css/cssLesson.html">Css Lesson</a>
+            <a href="../jsjsLesson.html">JavaScript Lesson</a>
+			<a href="../interactive/activity.html">Activity</a>
+        </nav>
+    </header>
+    <main id="jsLesson">
+    	<!-- insert here -->
+
+        <div class="body">
+            <div class="content">
+                <div id="intro">
+                    <br>
+                    <h1>Introduction</h1><br>
+                    <h2>What is JSON?</h2><br>
+                    <p id="par">JSON stands for JavaScript Object Notation.<br>
+                    JSON is a lightweight data interchange format<br>
+                    JSON is language independent *<br>
+                    JSON is "self-describing" and easy to understand<br>
+                    * The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only.<br> 
+                    Code for reading and generating JSON data can be written in any programming language.</p><br>
+                    <br>
+                    <h2>Exchanging Data</h2>
+                    <p id="par">When exchanging data between a browser and a server, the data can only be text.<br>
+                    JSON is text, and we can convert any JavaScript object into JSON, and send JSON to the server.<br>
+                    We can also convert any JSON received from the server into JavaScript objects.<br>
+                    This way we can work with the data as JavaScript objects, with no complicated parsing and translations.</p><br>
+                    <br>
+                    <h2>Sending Data</h2>
+                    <p id="par">If you have data stored in a JavaScript object, you can convert the object into JSON, and send it to a server:</p><br>
+                    <h3>Example</h3>
+                    <code>
+                        <p>var myObj = {name: "John", age: 31, city: "New York"};
+                        <p>var myJSON = JSON.stringify(myObj);
+                        <p>window.location = "demo_json.php?x=" + myJSON;</p>
+                    </code>
+                    <br>
+                    <h2>Receiving Data</h2>
+                    <p id="par">If you receive data in JSON format, you can convert it into a JavaScript object:</p><br>
+                    <h3>Example</h3>    
+                    <code>
+                        <p>var myJSON = '{"name":"John", "age":31, "city":"New York"}';
+                        <p>var myObj = JSON.parse(myJSON);
+                        <p>document.getElementById("demo").innerHTML = myObj.name;</p>
+                    </code>
+                    <br>
+                    <h2>Storing Data</h2>
+                    <p id="par"> When storing data, the data has to be a certain format, and regardless of where you choose to store it, <br>
+                    text is always one of the legal formats. JSON makes it possible to store JavaScript objects as text.</p><br>
+                    <h3>Example</h3>
+                    <code>  
+                        <p>// Storing data:
+                        <p>myObj = {name: "John", age: 31, city: "New York"};
+                        <p>myJSON = JSON.stringify(myObj);
+                        <p>localStorage.setItem("testJSON", myJSON);
+
+                        <p>// Retrieving data:
+                        <p>text = localStorage.getItem("testJSON");
+                        <p>obj = JSON.parse(text);
+                        <p>document.getElementById("demo").innerHTML = obj.name;</p>
+                    </code>
+                    <br>
+                    <h2>Exchanging Data</h2>
+                    <p id="par"> Since the JSON format is text only, it can easily be sent to and from a server, and used as a data format by any programming language.<br>
+                    JavaScript has a built in function to convert a string, written in JSON format, into native JavaScript objects:
+                    <p id='jsonFormat'>
+                        JSON.parse()
+                    </p>
+                    So, if you receive data from a server, in JSON format, you can use it like any other JavaScript object.</p><br>
+                    <h2>Valid Data Types</h2>
+                    <p id="par">In JSON, values must be one of the following data types:</p><br>
+                    <h3>String</h3>
+                    <p id="par">String in JSON must be written in double quotes.</p><br>
+                    <code>
+                        <p>{ "name":"John" }</p>
+                    </code>
+                    <h3>Number</h3>
+                    <p id="par">Numbers in JSON must be an integer or a floating point.</p><br>
+                    <code>
+                        <p>{ "age":30 }</p>
+                    </code>
+                    <h3>Objects (JSON Objects)</h3>
+                    <p id="par">Values in JSON can be objects.</p><br> 
+                    <code>
+                        <p>"employee":{ "name":"John", "age":30, "city":"New York" }</p>
+                    </code>
+                    <p id="par">Objects as values in JSON must follow the same rules as JSON objects.</p><br>
+                    <br>
+                    <h3>Array</h3>
+                    <p id="par">Values in JSON can be arrays.</p><br>
+                    <code>
+                        <p>{"employees":[ "John", "Anna", "Peter" ]}</p>
+                    </code>
+                    <h3>Booleans</h3>
+                    <p id="par">Values in JSON can be true/false.</p><br>
+                    <code>
+                        <p>{ "sale":true }</p>
+                    </code>
+                    <h3>JSON Null</h3>
+                    <p id="par">Values in JSON can be null.</p><br>
+                    <code>
+                        <p>{ "middlename":null }</p>
+                    </code>
+                    <br/>
+                    <p id="par">JSON values cannot be one of the following data types:</p><br>
+                    <br>
+                    <code>
+                        <p>Function
+                        <br>Date
+                        <br>Undefined</p>
+                    </code>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <a type="button" href="js2.html">Next Lesson</a>
+                </div>
+            </div>
+        </div>
+
+
+    </main
+>
+		 <footer>
+        <small>&copy; 2019 WebTek - FUCHSIA Group</small>
+    </footer>
+	</div>
+</body>
+</html>

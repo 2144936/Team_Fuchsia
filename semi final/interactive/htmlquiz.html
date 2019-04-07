@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FUCHSIA Interactive Learning</title>
+<link rel="stylesheet" href="../style/style.css"/>
+<script>
+var answers = ["C","D","C","D","D","C","D","C","A","D","B","C","A","D","B"], 
+    tot = answers.length;
+function getValue( radioName ){
+    var radios = document.getElementsByName( radioName ); 
+    for(var y=0; y<radios.length; y++)
+      if(radios[y].checked) return radios[y].value; 
+}
+//getting score
+function getScore(){
+  var score = 0;
+  for (var i=0; i<tot; i++)
+    if(getValue("question"+i)===answers[i]) score += 1;
+  return score;
+}
+function returnScore(){
+  alert("Your score is "+ getScore() +"/"+ tot);
+}
+</script>
+
+</head>
+<body>
+<div class="container">
+    <header>
+            <div id="banner">
+            <img src="../images/logo.jpg" alt=""/>
+        
+            <h1>
+                <a href="index.html"><span class="highlight">Web Tek</span></a>
+            </h1>
+            <p id="sub">Interactive Learning Resource 2019</p>
+                            </div>
+        <nav>
+            <a class="current" href="index.html">About</a>
+            <a href="../html/htmlLesson.html">Html Lesson</a>
+            <a href="../css/cssLesson.html">Css Lesson</a>
+            <a href="../js/jsLesson.html">JavaScript Lesson</a>
+            <a href="../interactive/activity.html">Activity</a>
+        </nav>
+    </header>
+    <main id="index">
+        <!-- insert here -->
+
+
+<ol type='1'>
+        <li>
+        <h3 id="man">What is the tag of main root?</h3>
+        <input type="radio" name="question0" value="A">&lt;figcaption &gt;<br>
+        <input type="radio" name="question0" value="B">&lt;ul &gt;<br>
+        <input type="radio" name="question0" value="C">&lt; html &gt;<br>
+        <input type="radio" name="question0" value="D">&lt; aside &gt;<br>
+        </li>
+
+ 
+        <li>
+        <h3 id="man">This element tag are container for the data or information of webpage.</h3>
+        <input type="radio" name="question1" value="A">Main root<br>
+        <input type="radio" name="question1" value="B">Content Sectioning<br>
+        <input type="radio" name="question1" value="C">Sectioning Root<br>
+        <input type="radio" name="question1" value="D">None of the above<br>
+        </li>
+  
+        <li>
+        <h3 id="man">This tag is to use to link between document and external resources and external style.</h3>
+        <input type="radio" name="question2" value="A">&lt; meta &gt;<br>
+        <input type="radio" name="question2" value="B">&lt;style  &gt;<br>
+        <input type="radio" name="question2" value="C">&lt; link &gt;<br>
+        <input type="radio" name="question2" value="D">All of the above<br>
+        </li>
+
+        <li>
+        <h3 id="man">It allow to organize or design the content by section of the web page.</h3>
+        <input type="radio" name="question3" value="A">style<br>
+        <input type="radio" name="question3" value="B">body<br>
+        <input type="radio" name="question3" value="C">address<br>
+        <input type="radio" name="question3" value="D">content sectioning<br>
+        </li>
+
+        <li>
+        <h3 id="man">its a tag that used to design and organize the content inside the body tag by section or block.</h3>
+        <input type="radio" name="question4" value="A">article<br>
+        <input type="radio" name="question4" value="B">small<br>
+        <input type="radio" name="question4" value="C">footer<br>
+        <input type="radio" name="question4" value="D">text content<br>
+        </li>
+
+        <li>
+        <h3 id="man">Its the nearest or root sectioning element. What this tag?</h3>
+        <input type="radio" name="question5" value="A">&lt;section&gt;<br>
+        <input type="radio" name="question5" value="B">&lt;nav&gt;<br>
+        <input type="radio" name="question5" value="C">&lt;footer&gt;<br>
+        <input type="radio" name="question5" value="D">&lt;main&gt;<br>
+        </li>
+
+        <li>
+        <h3 id="man">It a group of related is used to defines the primary or main content.</h3>
+        <input type="radio" name="question6" value="A">&lt; dir&gt;<br>
+        <input type="radio" name="question6" value="B">&lt; div&gt;<br>
+        <input type="radio" name="question6" value="C">&lt; blockquote&gt;<br>
+        <input type="radio" name="question6" value="D">&lt;section &gt;<br>
+        </li>
+
+        <li>
+        <h3 id="man">This tag is present the progress report of finish task.</h3>
+        <input type="radio" name="question7" value="A">&lt; select&gt;<br>
+        <input type="radio" name="question7" value="B">&lt; textarea&gt;<br>
+        <input type="radio" name="question7" value="C">&lt;progress &gt;<br>
+        <input type="radio" name="question7" value="D">All of the above<br>
+        </li>
+
+        <li>
+        <h3 id="man">Features of technology that is provided that allows the developer to use and create custom element. </h3>
+        <input type="radio" name="question8" value="A">Web components<br>
+        <input type="radio" name="question8" value="B">Interactive Elements<br>
+        <input type="radio" name="question8" value="C">a and b<br>
+        <input type="radio" name="question8" value="D">None of the above<br>
+        </li>
+
+        <li>
+        <h3 id="man">Refers to the list of command active menu buttons that users can perform. That appears in the webpage to the specified location.</h3>
+        <input type="radio" name="question9" value="A">template<br>
+        <input type="radio" name="question9" value="B">slot<br>
+        <input type="radio" name="question9" value="C">summary<br>
+        <input type="radio" name="question9" value="D">menu<br>
+        </li>
+
+        <li>
+        <h3 id="man">Tag to support javascript.</h3>
+        <input type="radio" name="question10" value="A">Edits<br>
+        <input type="radio" name="question10" value="B">Scripting<br>
+        <input type="radio" name="question10" value="C">embedded<br>
+        <input type="radio" name="question10" value="D">content<br>
+        </li>
+
+        <li>
+        <h3 id="man">Use to create or handle the form for the user fill-up and submit.</h3>
+        <input type="radio" name="question11" value="A">embedded content<br>
+        <input type="radio" name="question11" value="B"> table content<br>
+        <input type="radio" name="question11" value="C">forms<br>
+        <input type="radio" name="question11" value="D">button<br>
+        </li>
+
+        <li>
+        <h3 id="man">Additional content support for multimedia.</h3>
+        <input type="radio" name="question12" value="A">embedded content<br>
+        <input type="radio" name="question12" value="B">table content<br>
+        <input type="radio" name="question12" value="C">button<br>
+        <input type="radio" name="question12" value="D">forms<br>
+        </li>
+
+        <li>
+        <h3 id="man">this tag refers tot the widget that contain informations, when it is in open state.</h3>
+        <input type="radio" name="question13" value="A">caption<br>
+        <input type="radio" name="question13" value="B">dialog<br>
+        <input type="radio" name="question13" value="C">summary<br>
+        <input type="radio" name="question13" value="D">detail<br>
+        </li>
+
+        <li>
+        <h3 id="man">A tabular form composed of rows and columns taht contain information or data.</h3>
+        <input type="radio" name="question14" value="A">caption<br>
+        <input type="radio" name="question14" value="B">table<br>
+        <input type="radio" name="question14" value="C">summary<br>
+        <input type="radio" name="question14" value="D">dialog<br>
+        </li>
+    </ol>
+ 
+
+<button onclick="returnScore()">View Results</button>
+    </main>
+
+         <footer>
+        <small>&copy; 2019 WebTek - FUCHSIA Group</small>
+    </footer>
+    </div>
+</body>
+</html>
