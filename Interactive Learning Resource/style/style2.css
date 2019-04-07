@@ -172,4 +172,13 @@ div.row>div#activity>a>button#dunno{
 	font-size: 16px;
 	margin: 4px 2px;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: hotpink;
+}
   
