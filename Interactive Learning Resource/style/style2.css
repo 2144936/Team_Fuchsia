@@ -1,0 +1,175 @@
+* {
+	margin: 0;
+}
+
+body {
+	background:url(../images/background.jpg) no-repeat center center fixed #B6B6B4;
+	background-size: cover;
+	white-space: nowrap;
+ 	width: 80%;
+	padding-top: 2%;
+	margin: auto;
+}
+div.col>div>p{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*div.col>div>ul{
+	text-align: center;
+	list-style-position: inside;
+}*/
+
+
+.container {
+	width: 100%;
+	background-color:#FFF0F5;
+	border-radius: 30px 30px 0px 0px;
+}
+
+div.col>div{
+	display: none;
+}
+
+img{
+	float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-right: 70px;
+    background-size: auto;
+}
+
+#banner{
+	background-color:#FFF0F5;
+	width: 100%;
+	border-radius: 30px 30px 0px 0px;
+}
+
+header h1 {
+	text-align: left;
+}
+
+header p {
+	text-align: left;
+	color: black;
+	font-family: Calibri;
+	font-size: 90%;
+}
+
+header h1 a {
+	font-size: 70px;
+	color: black;
+}
+
+nav {
+	background-color:#EDEAE0;
+	clear: both;
+ 	opacity: 0.7;
+	width: 100%;
+	height: auto;
+}
+.section{
+	width: 90%;
+	margin: 20px auto 20px auto;
+	cursor: pointer;
+	background: #093145;
+	border-radius: 20px;
+}
+.section:hover{
+	background: #3C6478;
+}
+.section-ul{
+	display:none;
+}
+
+nav a {
+	color:#043927;
+	font-size: 25px;
+	margin-left: 30px;
+	text-decoration: none;
+
+}
+
+nav a:hover {
+	color:#ADD8E6;
+	background-color:#808080;
+}
+
+main {
+	white-space: initial;
+}
+
+main h2{
+	background:#EDEAE0;
+	color:#043927;
+	font-family: monospace;
+	
+}
+
+main h1{
+	background:#EDEAE0;
+	color:#043927;
+	font-family: monospace;
+}
+
+main h3{
+	background:#daefb6;
+	color:#043927;
+	font-family: monospace;
+}
+
+footer {
+	clear: both;
+	background-color: #EDEAE0;
+	width: 100%;
+}
+
+code {
+    display: table;
+    background-color: #EDEAE0;
+    border-color : 7f7fbf;
+    border-style : dashed;
+    border-width : 1px;
+    font-family  : courier new;
+    margin-left  : 128px;
+    padding      : 14px;
+    white-space  : pre;
+}
+
+p#jsonFormat{
+	background-color: #e6e6e6;
+	color: red;
+	display: inline;
+}
+
+p#warning{
+	color: red;
+	display: inline;
+}
+
+div.col>button { 
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  background-color: green; 
+}
+
+div.col>div{
+	background-color: #daefb6;
+}
+
+div.row>div#activity>a>button#dunno{
+	background-color: #daefb6;
+	border: none;
+	color: white;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+}
+  

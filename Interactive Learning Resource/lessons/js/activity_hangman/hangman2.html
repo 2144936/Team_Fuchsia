@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>JSON Activity 1</title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+	</head>
+	<body>
+		<input id="lessonVersion" value=1>
+		<h1>Data types!</h1>
+		<input type="button" id="startBtn" value="Start!" onClick="start();" />
+		<div id="start" style="visibility:hidden">
+			<div><img id="picture" src=""></div>
+			<h2>Answer: </h2>
+			<div id ="answer">Press any key to start guessing
+			</div>
+			<br>
+			<h2> Guesses Left </h2>
+			<div id ="tries">
+			</div>
+			<br>
+			<h2> Wrong letters </h2>
+			<div id="guesses">
+			</div>
+			<br>
+		</div>
+		<div class="finResult">
+			<h2 id="result"></h2>
+			<h3 id="score"></h2>
+			<h3 id="wins"></h2>
+			<h3 id="loses"></h2>
+			<h3 id="totalScore"></h3>
+			<p id="warning"></p>
+		</div>
+		<div id="nextQ">
+			<input type="button" id="nextBtn" value="Next Word" onClick="quest();" style="visibility:hidden" />
+			<input type="button" id="restartBtn" value="Restart" onClick="restart();" style="visibility:hidden" />
+		</div>
+		<div id="nextLesson" style="visibility:hidden">
+			<a href="js2.html">Next Lesson</a>
+		</div>
+		<script src="../js/hang.js"></script>
+	</body>
+</html>

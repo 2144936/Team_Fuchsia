@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FUCHSIA Interactive Learning</title>
+<link rel="stylesheet" href="../../style/style2.css"/>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div id="banner">
+				<img src="../../images/logo.jpg" alt=""/>
+				<h1>
+					<a href="index.html"><span class="highlight">Web Tek</span></a>
+				</h1>
+				<p id="sub">Interactive Learning Resource 2019</p>
+			</div>
+			<nav>
+				<a href="../../index.html">About</a>
+				<a href="../../htmlLesson.html">Html Lesson</a>
+				<a href="../../cssLesson.html">Css Lesson</a>
+				<a class="current" href="js1.html">JavaScript Lesson</a>
+				<a href="../../activity.html">Activity</a>
+			</nav>
+		</header>
+		<main id="index">
+			<hr>
+			<section id="about" class="container content-section text-center">
+				<div class="row">
+					<div class="col">
+						<h1>I. Introduction</h1>
+						<button onclick="getId('showMe');"><h2>What is JSON?</h2></button>
+						<div id="showMe">
+							<br>
+							JSON stands for JavaScript Object Notation<br>
+							JSON is a lightweight data interchange format<br>
+							JSON is language independent *<br>
+							JSON is "self-describing" and easy to understand<br>
+							* The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only.<br>
+							Code for reading and generating JSON data can be written in any programming language.<br>
+							<br>
+						</div>
+						<hr>
+						<button onclick="getId('showMe2');"><h2>Exchanging Data</h2></button>
+						<div id="showMe2">
+							<br>
+							When exchanging data between a browser and a server, the data can only be text.<br>
+							JSON is text, and we can convert any JavaScript object into JSON, and send JSON to the server.<br>
+							We can also convert any JSON received from the server into JavaScript objects.<br>
+							This way we can work with the data as JavaScript objects, with no complicated parsing and translations.<br>
+							<br>
+						</div>
+						<hr>
+						<button onclick="getId('showMe3');"><h2>Sending Data</h2></button>
+						<div id="showMe3">
+							<br>
+								If you have data stored in a JavaScript object, you can convert the object into JSON, and send it to a server:<br/>
+							<div>
+							<h3><p>Example</p></h3>
+							<code>
+								<p>var myObj = {name: "John", age: 31, city: "New York"};
+								<p>var myJSON = JSON.stringify(myObj);
+								<p>window.location = "demo_json.php?x=" + myJSON;</p>
+							</code>
+							</div>
+							<br>
+						</div>
+						<hr>
+						<button onclick="getId('showMe4');"><h2>Receiving Data</h2></button>
+						<div id="showMe4">
+							<br>
+								If you receive data in JSON format, you can convert it into a JavaScript object:<br/>
+							<h3>Example</h3>	
+							<code>
+								<p>var myJSON = '{"name":"John", "age":31, "city":"New York"}';
+								<p>var myObj = JSON.parse(myJSON);
+								<p>document.getElementById("demo").innerHTML = myObj.name;</p>
+							</code>
+							<br>
+						</div>
+						<hr>
+						<button onclick="getId('showMe5');"><h2>Storing Data</h2></button>
+						<div id="showMe5">
+							<br>
+							When storing data, the data has to be a certain format, and regardless of where you choose to store it, <br/>
+							text is always one of the legal formats. JSON makes it possible to store JavaScript objects as text.<br/>
+							<h3>Example</h3>
+							<code>	
+								<p>// Storing data:
+								<p>myObj = {name: "John", age: 31, city: "New York"};
+								<p>myJSON = JSON.stringify(myObj);
+								<p>localStorage.setItem("testJSON", myJSON);
+
+								<p>// Retrieving data:
+								<p>text = localStorage.getItem("testJSON");
+								<p>obj = JSON.parse(text);
+								<p>document.getElementById("demo").innerHTML = obj.name;</p>
+							</code>
+							<br>
+						</div>
+						<hr>
+						<button onclick="getId('showMe6');"><h2>Exchanging Data</h2></button>
+						<div id="showMe6">
+							<br>
+							Since the JSON format is text only, it can easily be sent to and from a server, and used as a data format by any programming language.<br/>
+							JavaScript has a built in function to convert a string, written in JSON format, into native JavaScript objects:
+							<p id='jsonFormat'>
+								JSON.parse()
+							</p>
+							<br>So, if you receive data from a server, in JSON format, you can use it like any other JavaScript object.
+							<br>
+							<br>
+						</div>
+						<hr>
+						<button type="button" onclick="getId('showMe7');"><h2>Valid Data Types</h2></button>
+						<div id="showMe7">
+							<br>
+							In JSON, values must be one of the following data types:
+							<br/>
+							<h3>String</h3>
+								String in JSON must be written in double quotes.<br/>
+							<code>
+								<p>{ "name":"John" }</p>
+							</code>
+							<h3>Number</h3>
+								Numbers in JSON must be an integer or a floating point.<br/>
+							<code>
+								<p>{ "age":30 }</p>
+							</code>
+							<h3>Objects (JSON Objects)</h3>
+								Values in JSON can be objects.<br/>	
+							<code>
+								<p>"employee":{ "name":"John", "age":30, "city":"New York" }</p>
+							</code>
+								Objects as values in JSON must follow the same rules as JSON objects.<br/>
+							<br/>
+							<h3>Array</h3>
+								Values in JSON can be arrays.<br/>
+							<code>
+								<p>{"employees":[ "John", "Anna", "Peter" ]}</p>
+							</code>
+							<h3>Booleans</h3>
+								Values in JSON can be true/false.<br/>
+							<code>
+								<p>{ "sale":true }</p>
+							</code>
+							<h3>JSON Null</h3>
+								Values in JSON can be null.<br/>
+							<code>
+								<p>{ "middlename":null }</p>
+							</code>
+							<br/>
+								JSON values cannot be one of the following data types:<br/>
+							<br/>
+							<code>
+								<p>Function
+								<br/>Date
+								<br/>Undefined</p>
+							</code>
+							<br>
+						</div>
+						<hr>
+						<h1>II. Syntax</h1>
+						<button onclick="getId('showMe8');"><h2>Rules</h2></button>
+						<div id="showMe8">
+							<br>
+							JSON syntax is derived from JavaScript object notation syntax:
+							<ul>	
+								<li>Data is in name/value pairs</li>
+								<li>Data is separated by commas</li>
+								<li>Curly braces hold objects</li>
+								<li>Square brackets hold arrays</li>
+							</ul>
+							<br>
+						</div>
+						<button onclick="getId('showMe9')"><h2>Data - A Name and a Value</h2></button>
+						<div id="showMe9">
+							<br>
+							JSON data is written as name/value pairs.<br/>
+							A name/value pair consists of a field name (in double quotes), followed by a colon, followed by a value:
+							<br/>
+							<h3>Example</h3>
+							<code>
+								<p>{ "name":"John" }</p>
+							</code>
+							<br>
+						</div>
+						<hr>
+						<button onclick="getId('showMe10')"><h2>Evaluates to JavaScript Objects</h2></button>
+						<div id="showMe10">
+						<br>
+							The JSON format is almost identical to JavaScript objects.
+							In JSON, keys must be strings, written with double quotes:
+							<h3>Example</h3>
+							<h3>JSON</h3>
+							<code>
+								<p>{ "name":"John" }</p>
+							</code>
+							<br>
+							In JavaScript, keys can be strings, numbers, or identifier names:
+							<h4>JavaScript</h4>
+							<code>
+								<p>{ name:"John" }</p>
+							</code>
+							<br>
+						</div>
+						<hr>
+						<button onclick="getId('showMe11')"><h2>Values</h2></button>
+						<div id="showMe11">
+							<br>
+							In JSON, values must be one of the following data types:
+							<ul>
+								<li>a string</li>
+								<li>a number</li>
+								<li>an object (JSON object)</li>
+								<li>an array</li>
+								<li>a boolean</li>
+								<li>null</li>
+							</ul>
+							<br>
+							In JavaScript values can be all of the above, plus any other valid JavaScript expression, including:
+							<ul>
+								<li>a function</li>
+								<li>a date</li>
+								<li>undefined</li>
+							</ul>	
+							<br>
+							In JSON, string values must be written with double quotes:
+							<br>
+							<code>
+								<p>{ "name":"John" }</p>
+							</code>
+							In JavaScript, you can write string values with double or single quotes:
+							<code>
+								<p>{ name:'John' }</p>
+							</code>
+							<br>
+						</div>
+						<hr>
+						<button onclick="getId('showMe12')"><h2>JSON Uses JavaScript Syntax</h2></button>
+						<div id="showMe12">
+							<br>
+							Because JSON syntax is derived from JavaScript object notation, very little extra software is needed to work with JSON within JavaScript.
+							With JavaScript you can create an object and assign data to it, like this:<br/>
+							<h3>Example</h3>	
+							<code>
+								<p>var person = { name: "John", age: 31, city: "New York" };</p>
+							</code>
+							<br>
+							You can access a JavaScript object like this:
+							<code>
+								<p>// returns John</p>
+								<p>person.name;</p>
+							</code>
+							<br>
+							It can also be accessed like this:
+							<code>
+								<p>// returns John</p>
+								<p>person["name"];</p>
+							</code>
+							<br>
+							Data can be modified like this:
+							<code>
+								<p>person.name = "Gilbert";</p>
+							</code>
+							<br>
+							It can also be modified like this:
+							<code>
+								<p>person["name"] = "Gilbert";</p>
+							</code>
+							<br>
+						</div>
+						<hr>
+						<button onclick="getId('showMe13')"><h2>JSON Files</h2></button>
+						<div id="showMe13">
+							<br>
+							<ul>
+								<li>The file type for JSON files is ".json"</li>
+								<li>The MIME type for JSON text is "application/json"</li>
+							</ul>
+							<br>
+						</div>
+						<hr>
+						<h1>III. Data Types</h1>
+						<button onclick="getId('showMe14')"><h2>Valid Data Types</h2></button>
+						<div id="showMe14"> 
+							<br>
+							In JSON, values must be one of the following data types:
+							<ul>	
+								<li>a string</li>
+								<li>a number</li>
+								<li>an object (JSON object)</li>
+								<li>an array</li>
+								<li>a boolean</li>
+								<li>null</li>
+							</ul>
+							JSON values cannot be one of the following data types:
+							<ul>
+								<li>a function</li>
+								<li>a date</li>
+								<li>undefined</li>
+							</ul>
+							<br>
+						</div>
+						<button onclick="getId('showMe15')"><h2>JSON Strings</h2></button>
+						<div id="showMe15">
+							<br>
+							Strings in JSON must be written in double quotes.
+							<br/>
+							<h3>Example</h3>
+							<code>
+								<p>{ "name":"John" }</p>
+							</code>
+							<br>
+							<h4>JSON Numbers</h4>
+							Numbers in JSON must be an integer or a floating point.
+							<br>
+							<h3>Example</h3>
+							<code>
+								<p>{ "age":30 }</p>
+							</code>
+							<br>
+							<h4>JSON Objects</h4>
+							Values in JSON can be objects.
+							<br>
+							<h3>Example</h3>
+							<code>
+								<p>{"employee":{ "name":"John", "age":30, "city":"New York" }}</p>
+							</code>
+							<br>
+							<p id="warning">Objects as values in JSON must follow the same rules as JSON objects.</p>
+							<br>
+						</div>
+						<button onclick="getId('showMe16')"><h2>Others.</h2></button>
+						<div id="showMe16">
+							<br>
+							<h3>Arrays</h3>
+							Values in JSON can be arrays.
+							<code>
+								<p>{"employees":[ "John", "Anna", "Peter" ]}</p>
+							</code>
+							<br>
+							<h3>Booleans</h3>
+							Values in JSON can be true/false.
+							<code>
+								<p>{ "sale":true }</p>
+							</code>
+							<h3>null</h3>
+							Values in JSON can be null.
+							<code>
+								<p>{ "middlename":null }</p>
+							</code>
+							<br>
+						</div>
+						<h1>IV. JSON.parse()</h1>
+						<button onclick="getId('showMe17')"><h2>How to use parse?</h2></button>
+						<div id="showMe17">
+							<br>
+							A common use of JSON is to exchange data to/from a web server.<br>
+							When receiving data from a web server, the data is always a string.<br>
+							Parse the data with JSON.parse(), and the data becomes a JavaScript object.<br>
+							<h3>Example</h3>
+							Imagine we received this text from a web server:
+							<code>
+								<p>'{ "name":"John", "age":30, "city":"New York"}'</p>
+							</code>
+							Use the JavaScript function <p id="jsonFormat">JSON.parse()</p> to convert text into a JavaScript object:
+							<code>
+								<p>var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');</p>
+							</code>
+							<p id="warning">Make sure the text is written in JSON format, or else you will get a syntax error.</p>
+							<br/>
+							Use the JavaScript object in your page:
+							<h3>Example</h3>
+							<code>
+								<p>&lt;p id="demo">&lt;/p></p>
+								<p>&lt;script></p>
+								<p>document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;</p>
+								<p>&lt;/script></p>
+							</code>
+							<br>
+						</div>
+						<button onclick="getId('showMe18')"><h2>JSON From the Server</h2></button>
+						<div id="showMe18">
+							<br>
+							You can request JSON from the server by using an AJAX request<br>
+							As long as the response from the server is written in JSON format, you can parse the string into a JavaScript object.<br>
+							<h3>Example</h3>
+							Use the XMLHttpRequest to get data from the server:
+							<code>
+								<p>var xmlhttp = new XMLHttpRequest();</p>
+								<p>xmlhttp.onreadystatechange = function() {</p>
+								<p>  if (this.readyState == 4 && this.status == 200) {</p>
+								<p>	var myObj = JSON.parse(this.responseText);</p>
+								<p>	document.getElementById("demo").innerHTML = myObj.name;</p>
+								<p>  }</p>
+								<p>};</p>
+								<p>xmlhttp.open("GET", "json_demo.txt", true);</p>
+								<p>xmlhttp.send();</p>
+							</code>
+							<br>
+						</div>
+						<button onclick="getId('showMe19')"><h2>Array as JSON</h2></button>
+						<div id="showMe19">
+							When using the <p id="warning">JSON.parse()</p> on a JSON derived from an array, the method will return a JavaScript array, instead of a JavaScript object.
+							<h3>Example</h3>
+							The JSON returned from the server is an array:
+							<code>
+								<p>var xmlhttp = new XMLHttpRequest();</p>
+								<p>xmlhttp.onreadystatechange = function() {</p>
+								<p>  if (this.readyState == 4 && this.status == 200) {</p>
+								<p>	var myArr = JSON.parse(this.responseText);</p>
+								<p>	document.getElementById("demo").innerHTML = myArr[0];</p>
+								<p>  }</p>
+								<p>};</p>
+								<p>xmlhttp.open("GET", "json_demo_array.txt", true);</p>
+								<p>xmlhttp.send();</p>
+							</code>
+							<br>
+						</div>
+						<button onclick="getId('showMe20')"><h2>Exceptions</h2></button>
+						<div id="showMe20">
+							<h2>Parsing Dates</h1>
+							Date objects are not allowed in JSON.<br>
+							If you need to include a date, write it as a string.<br>
+							You can convert it back into a date object later:<br>
+							<h3>Example</h3>
+							Convert a string into a date:
+							<code>
+								<p>var text = '{ "name":"John", "birth":"1986-12-14", "city":"New York"}';</p>
+								<p>var obj = JSON.parse(text);</p>
+								<p>obj.birth = new Date(obj.birth);</p>
+
+								<p>document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;</p>
+							</code>
+							Or, you can use the second parameter, of the <p id="warning">JSON.parse()</p> function, called reviver.<br>
+							The reviver parameter is a function that checks each property, before returning the value.
+							<h3>Example</h3>
+							Convert a string into a date, using the reviver function:
+							<code>
+								<p>var text = '{ "name":"John", "birth":"1986-12-14", "city":"New York"}';</p>
+								<p>var obj = JSON.parse(text, function (key, value) {</p>
+								<p>  if (key == "birth") {</p>
+								<p>	return new Date(value);</p>
+								<p>  } else {</p>
+								<p>	return value;</p>
+								<p>  }</p>
+								<p>});</p>
+
+								<p>document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;</p>
+							</code>
+							<h2>Parsing Functions</h2>
+							Functions are not allowed in JSON.<br>
+							If you need to include a function, write it as a string.<br>
+							You can convert it back into a function later:<br>
+							<h3>Example</h3>
+							Convert a string into a function:
+							<code>
+								<p>var text = '{ "name":"John", "age":"function () {return 30;}", "city":"New York"}';</p>
+								<p>var obj = JSON.parse(text);</p>
+								<p>obj.age = eval("(" + obj.age + ")");</p>
+
+								<p>document.getElementById("demo").innerHTML = obj.name + ", " + obj.age();</p>
+							</code>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+		<footer>
+			<small>&copy; 2019 WebTek - FUCHSIA Group</small>
+		</footer>
+	
+	<script src="js/showHide.js"></script>
+</body>
+</html>
