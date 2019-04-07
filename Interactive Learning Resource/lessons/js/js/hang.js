@@ -93,7 +93,7 @@ function rounds() {
   if(alpha.toString() == fillMe.toString()) { 
 	corrects++ //Adds the correct guesses of the user
 	 //Prints out if the user guessed the correct answer
-	document.getElementById("result").innerHTML = "Correct!";
+	//document.getElementById("result").innerHTML = "Correct!";
 	/*nextBtn = document.createElement('input');
 	setElementAttr(nextBtn,{"type": "button", "value": "Next Word!", "onclick": "quest()"});
 	document.getElementById("nextQ").appendChild(nextBtn);*/
@@ -102,8 +102,8 @@ function rounds() {
 	//quest();
   } else if (livesLeft===0) { 
     wrongs++ //Adds the wrong guesses of the user
-	document.getElementById("result").innerHTML = "Wrong!"; //Notifies the user that they ran out of guesses left
-	document.getElementById("warning").innerHTML = "Consider reviewing lesson 1 before taking the activity";
+	//document.getElementById("result").innerHTML = "Wrong!"; //Notifies the user that they ran out of guesses left
+	//document.getElementById("warning").innerHTML = "Consider reviewing lesson 1 before taking the activity";
 	document.getElementById("restartBtn").style.visibility="visible";
 	canPress = false;
   }
